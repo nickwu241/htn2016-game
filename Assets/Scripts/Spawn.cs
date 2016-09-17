@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
 
-public class Spawn : NetworkBehaviour
+//using UnityEngine.Networking;
+
+public class Spawn : MonoBehaviour
 {
 	//Camera camera;
 
@@ -21,8 +22,8 @@ public class Spawn : NetworkBehaviour
 		}
 	}
 
-	public override void OnStartLocalPlayer ()
+	/*public override void OnStartLocalPlayer ()
 	{
 		GetComponent<SpriteRenderer> ().material.color = Color.blue;
-	}
+	}*/
 }
