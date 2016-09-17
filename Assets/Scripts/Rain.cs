@@ -5,6 +5,9 @@ public class Rain : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		Destroy(this.gameObject);
+		if (this.gameObject.tag != col.gameObject.tag)
+		{
+			Destroy(this.gameObject);
+		}
 	}
 }

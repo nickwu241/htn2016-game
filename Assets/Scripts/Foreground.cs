@@ -2,14 +2,22 @@
 using System.Collections;
 
 public class Foreground : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
+	Player player;
+	void Start()
+	{
+		player = GetComponentInChildren<Player>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void Update()
+	{
+		
+	}
+
+	void checkFlags()
+	{
+		if (player.onFire)
+		{
+			player.health = player.health - 1;
+		}
 	}
 }
