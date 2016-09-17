@@ -14,6 +14,7 @@ public class Commands : NetworkBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		rainPrefab = GameObject.FindGameObjectWithTag("Rain");
 		command = 1;
 	}
 	

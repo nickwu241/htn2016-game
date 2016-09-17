@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Camera : MonoBehaviour
+public class GameCamera : MonoBehaviour
 {
 	private GameObject player;
 	private Vector3 offset;
+
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
