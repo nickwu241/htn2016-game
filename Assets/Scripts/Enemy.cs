@@ -2,15 +2,30 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-
-	public Vector2 knockbackV;
-	// Use this for initialization
-	void Start () {
-		knockbackV = Vector2.left;
-	}
 	
-	// Update is called once per frame
-	void FixedUpdate () {
-		
+	// TODO: Walk towards player
+	// Set in Unity
+	public int health;
+	public bool dead { set; get; }
+	void Start ()
+	{
+		health = 0;
+	}
+
+	void FixedUpdate()
+	{
+		if (health <= 0) dead = true;
+	}
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		string colTag = col.gameObject.tag;
+		if (colTag.Equals("Fire"))
+		{
+			//
+		}
+		else if (colTag.Equals("Water"))
+		{
+			//
+		}
 	}
 }
