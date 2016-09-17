@@ -5,20 +5,19 @@ using System.Collections;
 
 public class Spawn : MonoBehaviour
 {
-	//Camera camera;
+	new Camera camera;
 
 	// Use this for initialization
 	void Start ()
 	{
-		//camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		camera = Camera.main;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {	
-			transform.position = new Vector3 (Camera.main.ScreenToWorldPoint (Input.mousePosition).x, Camera.main.ScreenToWorldPoint (Input.mousePosition).y, 0);
-			print (Camera.main.ScreenToWorldPoint (Input.mousePosition));
+			transform.position = new Vector3 (camera.ScreenToWorldPoint (Input.mousePosition).x, camera.ScreenToWorldPoint (Input.mousePosition).y, 0);
 		}
 	}
 

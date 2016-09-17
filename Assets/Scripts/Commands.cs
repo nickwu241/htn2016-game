@@ -22,7 +22,6 @@ public class Commands : NetworkBehaviour
 	void Update ()
 	{
 		switchCommand ();
-		//print ("Command: " + command);
 		switch (command) {
 		case 1:
 			if (Input.GetKeyDown (KeyCode.Mouse0)) {

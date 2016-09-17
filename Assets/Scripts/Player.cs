@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-
+	public int START_HEALTH;
 	private static Vector2 KB_VECT = Vector2.left;
 
 	public int health { get; set; }
@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
 	void Start()
 	{
-		health = 10;
+		health = START_HEALTH;
 		velocity = Vector2.right;
 		rb2D = GetComponent<Rigidbody2D>();
 		dead = false;
@@ -40,9 +40,9 @@ public class Player : MonoBehaviour
 		{
 			//
 		}
-		else if (colTag.Equals("Water"))
+		else if (colTag.Equals("Rain"))
 		{
-			//
+			health++;
 		}
 	}
 }
