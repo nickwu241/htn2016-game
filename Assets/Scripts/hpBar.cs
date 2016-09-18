@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 // Script that Lerp the color of a image depending of the scale of the transform
-public class ChangeColorByScale : MonoBehaviour
+public class hpBar : MonoBehaviour
 {
 
 	public enum SelectedAxis
@@ -15,9 +15,11 @@ public class ChangeColorByScale : MonoBehaviour
 	}
 	public SelectedAxis selectedAxis = SelectedAxis.xAxis;
 
+	private Player player;
 	// Target
 	public Image image;
 	public GameObject healthBar;
+	private int health;
 
 	// Parameters
 	public float minValue = 0.0f;
@@ -28,6 +30,7 @@ public class ChangeColorByScale : MonoBehaviour
 	// The default image is the one in the gameObject
 	void Start()
 	{
+		player = GetComponentInChildren<Player>();
 		if (image == null)
 		{
 			image = GetComponent<Image>();
@@ -44,6 +47,8 @@ public class ChangeColorByScale : MonoBehaviour
 
 	void Update()
 	{
+		print(player.health / player.MAX_HEALTH);
+		SetHealthVisual(player.health / player.MAX_HEALTH);
 		switch (selectedAxis)
 		{
 			case SelectedAxis.xAxis:
