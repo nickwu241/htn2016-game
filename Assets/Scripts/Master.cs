@@ -9,7 +9,7 @@ public class Master : MonoBehaviour
 	private int enemyKillCount;
 
 	private Player player;
-	private Text HPText;
+	private Text hp, cact, enemy, floatInstructions;
 	// Target
 	public Image image;
 	public GameObject healthBar;
@@ -24,10 +24,31 @@ public class Master : MonoBehaviour
 	void Start ()
 	{
 		player = GetComponentInChildren<Player> ();
-		HPText = GetComponentInChildren<Text> ();
+		Text[] texts = GetComponentsInChildren<Text>();
+		foreach (Text text in texts)
+		{
+			if (text.name.Equals("HP"))
+			{
+				hp = text;
+			}
+			else if (text.name.Equals("Cact"))
+			{
+				cact = text;
+			}
+			else if (text.name.Equals("Enemy"))
+			{
+				enemy = text;
+			}
+			else if (text.name.Equals("Instruction"))
+			{
+				floatInstructions = text;
+			}
+		}
 		if (image == null) {
 			image = GetComponent<Image> ();
 		}
+
+		Destroy(floatInstructions, 8.0f);
 	}
 
 	// Health between [0.0f,1.0f] == (currentHealth / totalHealth)
@@ -43,9 +64,9 @@ public class Master : MonoBehaviour
 		cactusKillCount = Cactus.killed;
 		enemyKillCount = Enemy.killed;
 
-		HPText.text = "HP: " + player.health + "\n";
-		HPText.text += "Cacti killed: " + cactusKillCount + " :(" + "\n";
-		HPText.text += "Enemies killed: " + enemyKillCount + " :)" + "\n";
+		hp.text = "HP: " + player.health;
+		cact.text = "Cacti killed: " + cactusKillCount + " D:";
+		enemy.text = "Enemies killed: " + enemyKillCount + " :)";
 		//SetHealthVisual(player.health / player.MAX_HEALTH);
 		// Lerp color depending on the scale factor
 		/*
