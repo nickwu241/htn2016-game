@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	public float START_HEALTH;
+	public float MAX_HEALTH;
 	public int FLAME_DURATION;
 	public int SPEED_MULTIPLIER;
 	private static Vector2 KB_VECT = Vector2.left;
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
 	void Start ()
 	{
-		health = START_HEALTH;
+		health = MAX_HEALTH;
 		flameTimer = 0;
 		rb2D = GetComponent<Rigidbody2D> ();
 		velocity = new Vector2 (1, -rb2D.gravityScale * rb2D.mass / 9.8f);
