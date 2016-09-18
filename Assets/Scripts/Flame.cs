@@ -15,7 +15,7 @@ public class Flame : MonoBehaviour
 
 	void Update ()
 	{
-		if (Time.time - startTime > 1.5) {
+		if (Time.time - startTime > 1) {
 			explode ();
 		}
 	}

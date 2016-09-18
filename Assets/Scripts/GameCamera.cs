@@ -6,15 +6,15 @@ public class GameCamera : MonoBehaviour
 	private GameObject player;
 	private Vector3 offset;
 
-	void Start()
+	void Start ()
 	{
-		player = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindGameObjectWithTag ("Player");
 		offset = transform.position - player.transform.position;
 	}
 
-	void FixedUpdate()
+	void FixedUpdate ()
 	{
 		//Only move in X axis
-		transform.position = new Vector3(player.transform.position.x, 0, 0) + offset;
+		transform.position = new Vector3 (player.transform.position.x, 3, 0) + offset;
 	}
 }
