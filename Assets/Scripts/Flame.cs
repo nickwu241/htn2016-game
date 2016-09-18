@@ -4,23 +4,27 @@ using System.Collections;
 public class Flame : MonoBehaviour
 {
 	public Sprite explosion;
+	public Sprite ignite;
 	private float startTime;
 	// Use this for initialization
-	void Start()
+	void Start ()
 	{
+		GetComponent<SpriteRenderer> ().sprite = ignite;
 		startTime = Time.time;
+		print (Time.time);
 	}
 
-	void Update()
+	void Update ()
 	{
-		if (Time.time - startTime > 1.5)
-		{
-			explode();
+		print (Time.time);
+		if (Time.time - startTime > 1.5) {
+			explode ();
 		}
 	}
-	private void explode()
+
+	private void explode ()
 	{
-		//GetComponentInChildren<SpriteRenderer>().sprite = explosion;
+		GetComponent<SpriteRenderer> ().sprite = explosion;
 	}
 	/*
 	void OnTriggerEnter2D(Collision2D col)
