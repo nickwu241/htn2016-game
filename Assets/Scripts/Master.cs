@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Master : MonoBehaviour {
 
 	private Player player;
+	private Text HPText;
 	// Target
 	public Image image;
 	public GameObject healthBar;
@@ -19,10 +20,12 @@ public class Master : MonoBehaviour {
 	void Start()
 	{
 		player = GetComponentInChildren<Player>();
+		HPText = GetComponentInChildren<Text>();
 		if (image == null)
 		{
 			image = GetComponent<Image>();
 		}
+		
 	}
 
 	// Health between [0.0f,1.0f] == (currentHealth / totalHealth)
@@ -35,12 +38,15 @@ public class Master : MonoBehaviour {
 
 	void Update()
 	{
-		SetHealthVisual(player.health / player.MAX_HEALTH);
+		HPText.text = "HP: " + player.health;
+		//SetHealthVisual(player.health / player.MAX_HEALTH);
 		// Lerp color depending on the scale factor
+		/*
 		image.color = Color.Lerp(minColor,
 								 maxColor,
 								 Mathf.Lerp(minValue,
 											maxValue,
 											transform.localScale.x));
+		*/
 	}
 }
