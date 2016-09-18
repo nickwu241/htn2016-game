@@ -53,7 +53,8 @@ public class Player : MonoBehaviour
 		string colTag = col.gameObject.tag;
 		if (colTag.Equals ("Enemy")) {
 			health--;
-			rb2D.MovePosition (rb2D.position + KB_VECT * SPEED_MULTIPLIER * Time.fixedDeltaTime);
+			//rb2D.MovePosition (rb2D.position + KB_VECT * SPEED_MULTIPLIER * Time.fixedDeltaTime);
+			transform.Translate (-5, 0, 0, Space.Self);
 		} else if (colTag.Equals ("Rain")) {
 			health++;
 		}
