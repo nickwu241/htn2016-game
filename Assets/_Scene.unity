@@ -243,6 +243,7 @@ GameObject:
   - 95: {fileID: 637798054}
   - 114: {fileID: 637798053}
   - 61: {fileID: 637798052}
+  - 50: {fileID: 637798056}
   m_Layer: 10
   m_Name: Cactus
   m_TagString: Untagged
@@ -336,6 +337,23 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!50 &637798056
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 637798050}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &640291821
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235385062eff677419afec806e294ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  tools: []
+  toolIndex: 0
 --- !u!4 &722922765
 Transform:
   m_ObjectHideFlags: 0
@@ -507,6 +528,13 @@ MonoBehaviour:
   START_HEALTH: 10
   FLAME_DURATION: 3
   SPEED_MULTIPLIER: 3
+  flameTimer: 0
+  startTime: 0
+  velocity: {x: 0, y: 0}
+  rb2D: {fileID: 0}
+  <health>k__BackingField: 0
+  <dead>k__BackingField: 0
+  <onFire>k__BackingField: 0
 --- !u!212 &947279109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -701,6 +729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 21300000, guid: 1963cbc8b0e5fc54ca61095590eb1928, type: 3}
   ignite: {fileID: 21300000, guid: b350ac29f5f899c49ae8c103c2110c0c, type: 3}
+  startTime: 0
 --- !u!1 &1367097316
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  <dead>k__BackingField: 0
 --- !u!95 &1465305983
 Animator:
   serializedVersion: 3
@@ -1119,3 +1149,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e901814d177474f43874ce0dfbf395d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}

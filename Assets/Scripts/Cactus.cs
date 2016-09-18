@@ -5,10 +5,13 @@ public class Cactus : MonoBehaviour
 {
 	//public Sprite alive;
 	public Sprite burnt;
+	public Animator anim;
 
 	// Use this for initialization
 	void Start ()
 	{
+		anim = GetComponent<Animator> ();
+		//print (gameObject.GetComponent<SpriteRenderer> ().sprite);
 		//GetComponent<SpriteRenderer> ().sprite = alive;
 	}
 	
@@ -20,9 +23,10 @@ public class Cactus : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		//print (col.gameObject.name + "you bad");
 		if (other.gameObject.tag.Equals ("Flame")) {
-			GetComponent<SpriteRenderer> ().sprite = burnt;
+			print (other + " you bad");
+			anim.enabled = false;
+			gameObject.GetComponent<SpriteRenderer> ().sprite = burnt;
 		}
 	}
 }
