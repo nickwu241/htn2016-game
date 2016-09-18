@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	public int START_HEALTH;
+	public static int START_HEALTH;
+	public static int FLAME_DURATION;
 	private static Vector2 KB_VECT = Vector2.left;
 	public int health { get; set; }
 	private int flameTimer;
@@ -32,7 +33,7 @@ public class Player : MonoBehaviour
 			health--;
 			startTime++;
 			flameTimer++;
-			if (flameTimer >= 5)
+			if (flameTimer >= FLAME_DURATION)
 			{
 				onFire = false;
 			}
