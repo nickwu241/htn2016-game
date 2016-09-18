@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 	public float MAX_HEALTH;
 	public int FLAME_DURATION;
 	public int SPEED_MULTIPLIER;
-	private static Vector2 KB_VECT = Vector2.left;
 
 	public float health { get; set; }
 
@@ -53,10 +52,12 @@ public class Player : MonoBehaviour
 		string colTag = col.gameObject.tag;
 		if (colTag.Equals ("Enemy")) {
 			health--;
-			//rb2D.MovePosition (rb2D.position + KB_VECT * SPEED_MULTIPLIER * Time.fixedDeltaTime);
 			transform.Translate (-5, 0, 0, Space.Self);
 		} else if (colTag.Equals ("Rain")) {
-			health++;
+			if (++health > MAX_HEALTH)
+			{
+				health = MAX_HEALTH;
+			}
 		}
 	}
 

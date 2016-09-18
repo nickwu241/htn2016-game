@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour
 {
-	
+
+	public static int killed = 0;
 	// TODO: Walk towards player
 	// Set in Unity
 	public int health;
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
 			dead = true;
 
 		if (dead) {
+			killed++;
 			Destroy (gameObject);
 		}
 	}

@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class Master : MonoBehaviour {
 
+	private int cactusKillCount;
+	private int enemyKillCount;
+
 	private Player player;
 	private Text HPText;
 	// Target
@@ -36,9 +39,14 @@ public class Master : MonoBehaviour {
 													 healthBar.transform.localScale.z);
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
-		HPText.text = "HP: " + player.health;
+		cactusKillCount = Cactus.killed;
+		enemyKillCount = Enemy.killed;
+
+		HPText.text = "HP: " + player.health + "\n";
+		HPText.text += "Cacti killed: " + cactusKillCount + ":(" + "\n";
+		HPText.text += "Enemies killed: " + enemyKillCount + ":)" + "\n";
 		//SetHealthVisual(player.health / player.MAX_HEALTH);
 		// Lerp color depending on the scale factor
 		/*
