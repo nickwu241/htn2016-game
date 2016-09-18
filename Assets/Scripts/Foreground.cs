@@ -12,12 +12,4 @@ public class Foreground : MonoBehaviour {
 	{
 		
 	}
-
-	void checkFlags()
-	{
-		if (player.onFire)
-		{
-			player.health = player.health - 1;
-		}
-	}
 }
