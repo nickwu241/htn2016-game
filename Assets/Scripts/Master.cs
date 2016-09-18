@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Master : MonoBehaviour {
+public class Master : MonoBehaviour
+{
 
 	private int cactusKillCount;
 	private int enemyKillCount;
@@ -20,33 +21,31 @@ public class Master : MonoBehaviour {
 	public Color maxColor = Color.green;
 
 	// The default image is the one in the gameObject
-	void Start()
+	void Start ()
 	{
-		player = GetComponentInChildren<Player>();
-		HPText = GetComponentInChildren<Text>();
-		if (image == null)
-		{
-			image = GetComponent<Image>();
+		player = GetComponentInChildren<Player> ();
+		HPText = GetComponentInChildren<Text> ();
+		if (image == null) {
+			image = GetComponent<Image> ();
 		}
-		
 	}
 
 	// Health between [0.0f,1.0f] == (currentHealth / totalHealth)
-	public void SetHealthVisual(float healthNormalized)
+	public void SetHealthVisual (float healthNormalized)
 	{
-		healthBar.transform.localScale = new Vector3(healthNormalized,
-													 healthBar.transform.localScale.y,
-													 healthBar.transform.localScale.z);
+		healthBar.transform.localScale = new Vector3 (healthNormalized,
+			healthBar.transform.localScale.y,
+			healthBar.transform.localScale.z);
 	}
 
-	void FixedUpdate()
+	void FixedUpdate ()
 	{
 		cactusKillCount = Cactus.killed;
 		enemyKillCount = Enemy.killed;
 
 		HPText.text = "HP: " + player.health + "\n";
-		HPText.text += "Cacti killed: " + cactusKillCount + ":(" + "\n";
-		HPText.text += "Enemies killed: " + enemyKillCount + ":)" + "\n";
+		HPText.text += "Cacti killed: " + cactusKillCount + " :(" + "\n";
+		HPText.text += "Enemies killed: " + enemyKillCount + " :)" + "\n";
 		//SetHealthVisual(player.health / player.MAX_HEALTH);
 		// Lerp color depending on the scale factor
 		/*
