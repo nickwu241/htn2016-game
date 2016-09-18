@@ -257,6 +257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235385062eff677419afec806e294ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  command: 0
+  rainPrefab: {fileID: 148086, guid: 3d8116fc9b3532b40b70a7e791fec584, type: 2}
+  rainSpawn: {fileID: 471338, guid: 591831728197b5848aa0971a39523a48, type: 2}
 --- !u!4 &722922765
 Transform:
   m_ObjectHideFlags: 0
@@ -681,6 +684,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 640291822}
   m_RootOrder: 0

@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 99f0766318fabbd43b8e3fa5ab5861ff
+timeCreated: 1474147596
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Hack the North-03_0
+    21300002: Hack the North-03_1
+    21300004: Hack the North-03_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Hack the North-03_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1700
+        height: 1667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70.5, y: 107}
+        - {x: 17.5, y: 84}
+        - {x: 14.5, y: 69}
+        - {x: 8.5, y: 42}
+        - {x: 12.5, y: 67}
+        - {x: 26.5, y: 116}
+        - {x: 25.5, y: 128}
+        - {x: 7.5, y: 156}
+        - {x: -129.5, y: 156}
+        - {x: -129.5, y: -68}
+        - {x: -66.5, y: -159}
+        - {x: 7.5, y: -159}
+        - {x: 18.5, y: -153}
+        - {x: 81.5, y: -15}
+        - {x: 81.5, y: 79}
+    - name: Hack the North-03_1
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 1700
+        height: 1667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 75.63556, y: 102}
+        - {x: 50.63556, y: 90}
+        - {x: 22.63556, y: 69}
+        - {x: 22.63556, y: 50}
+        - {x: 19.63556, y: 72}
+        - {x: 27.63556, y: 73}
+        - {x: 35.63556, y: 95}
+        - {x: 48.63556, y: 131}
+        - {x: 38.63556, y: 152}
+        - {x: -115.36444, y: 152}
+        - {x: -115.36444, y: -148}
+        - {x: -109.36444, y: -152}
+        - {x: 35.63556, y: -152}
+        - {x: 38.63556, y: -150}
+        - {x: 93.63556, y: -21}
+        - {x: 93.63556, y: 68}
+    - name: Hack the North-03_2
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 0
+        width: 1700
+        height: 1667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.771118, y: -170}
+        - {x: 21.771118, y: -172}
+        - {x: 24.771118, y: -180}
+        - {x: 30.771118, y: -184}
+        - {x: 55.77112, y: -184}
+        - {x: 76.77112, y: -168}
+        - {x: 65.77112, y: -152}
+        - {x: 97.77112, y: -28}
+        - {x: 97.77112, y: 62}
+        - {x: 56.77112, y: 90}
+        - {x: 35.77112, y: 60}
+        - {x: 32.77112, y: 30}
+        - {x: 24.771118, y: 30}
+        - {x: 50.77112, y: 110}
+        - {x: 23.771118, y: 137}
+        - {x: -52.22888, y: 137}
+        - {x: -106.22888, y: 75}
+        - {x: -106.22888, y: -115}
+        - {x: -80.22888, y: -184}
+        - {x: 21.771118, y: -184}
+        - {x: 21.771118, y: -175}
+        - {x: 20.771118, y: -169}
+        - {x: 27.771118, y: -170}
+      - - {x: 63.77112, y: -168}
+        - {x: 62.77112, y: -169}
+        - {x: 62.77112, y: -174}
+        - {x: 67.77112, y: -177}
+        - {x: 73.77112, y: -177}
+        - {x: 74.77112, y: -176}
+        - {x: 74.77112, y: -172}
+        - {x: 68.77112, y: -168}
+      - - {x: -97.22888, y: 89}
+        - {x: -97.22888, y: 51}
+        - {x: -85.22888, y: 51}
+        - {x: -83.22888, y: 52}
+        - {x: -83.22888, y: 76}
+        - {x: -89.22888, y: 89}
+      - - {x: -69.22888, y: 105}
+        - {x: -71.22888, y: 95}
+        - {x: -71.22888, y: 58}
+        - {x: -65.22888, y: 58}
+        - {x: -62.22888, y: 59}
+        - {x: -57.22888, y: 76}
+        - {x: -57.22888, y: 105}
+      - - {x: -87.22888, y: 115}
+        - {x: -87.22888, y: 72}
+        - {x: -81.22888, y: 62}
+        - {x: -73.22888, y: 62}
+        - {x: -73.22888, y: 98}
+        - {x: -79.22888, y: 115}
+      - - {x: 51.77112, y: 83}
+        - {x: 53.77112, y: 75}
+        - {x: 61.77112, y: 75}
+        - {x: 61.77112, y: 111}
+        - {x: 54.77112, y: 111}
+        - {x: 51.77112, y: 108}
+      - - {x: 68.77112, y: 129}
+        - {x: 65.77112, y: 128}
+        - {x: 64.77112, y: 123}
+        - {x: 64.77112, y: 80}
+        - {x: 66.77112, y: 76}
+        - {x: 74.77112, y: 76}
+        - {x: 75.77112, y: 77}
+        - {x: 76.77112, y: 83}
+        - {x: 76.77112, y: 124}
+        - {x: 75.77112, y: 129}
+      - - {x: 84.77112, y: 111}
+        - {x: 81.77112, y: 99}
+        - {x: 81.77112, y: 78}
+        - {x: 87.77112, y: 78}
+        - {x: 95.77112, y: 82}
+        - {x: 95.77112, y: 111}
+      - - {x: -41.22888, y: 147}
+        - {x: -42.22888, y: 145}
+        - {x: -42.22888, y: 137}
+        - {x: -39.22888, y: 132}
+        - {x: -36.22888, y: 129}
+        - {x: -33.22888, y: 130}
+        - {x: -32.22888, y: 133}
+        - {x: -32.22888, y: 142}
+        - {x: -37.22888, y: 147}
+      - - {x: 44.77112, y: 150}
+        - {x: 39.77112, y: 150}
+        - {x: 36.77112, y: 149}
+        - {x: 30.771118, y: 139}
+        - {x: 30.771118, y: 133}
+        - {x: 40.77112, y: 133}
+        - {x: 44.77112, y: 137}
+        - {x: 45.77112, y: 142}
+        - {x: 45.77112, y: 149}
+      - - {x: -21.228882, y: 172}
+        - {x: -21.228882, y: 147}
+        - {x: -19.228882, y: 137}
+        - {x: -7.228882, y: 137}
+        - {x: -7.228882, y: 170}
+        - {x: -10.228882, y: 172}
+      - - {x: 0.77111816, y: 185}
+        - {x: -2.2288818, y: 182}
+        - {x: -6.228882, y: 163}
+        - {x: -6.228882, y: 140}
+        - {x: -1.2288818, y: 139}
+        - {x: 3.7711182, y: 139}
+        - {x: 7.771118, y: 162}
+        - {x: 7.771118, y: 182}
+        - {x: 4.771118, y: 185}
+      - - {x: 21.771118, y: 164}
+        - {x: 16.771118, y: 164}
+        - {x: 11.771118, y: 155}
+        - {x: 11.771118, y: 144}
+        - {x: 13.771118, y: 141}
+        - {x: 15.771118, y: 141}
+        - {x: 17.771118, y: 142}
+        - {x: 24.771118, y: 151}
+        - {x: 24.771118, y: 161}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
