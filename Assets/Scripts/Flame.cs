@@ -11,6 +11,10 @@ public class Flame : MonoBehaviour
 	{
 		GetComponent<SpriteRenderer> ().sprite = ignite;
 		startTime = Time.time;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 	}
 
 	void Update ()
