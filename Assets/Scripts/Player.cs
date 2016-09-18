@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	public static int START_HEALTH;
-	public static int FLAME_DURATION;
+	public int START_HEALTH;
+	public int FLAME_DURATION;
+	public int SPEED_MULTIPLIER;
 	private static Vector2 KB_VECT = Vector2.left;
 	public int health { get; set; }
 	private int flameTimer;
@@ -18,8 +19,8 @@ public class Player : MonoBehaviour
 	{
 		health = START_HEALTH;
 		flameTimer = 0;
-		velocity = Vector2.right;
 		rb2D = GetComponent<Rigidbody2D>();
+		velocity = new Vector2(1, -rb2D.gravityScale * rb2D.mass / 9.8f);
 		dead = false;
 		onFire = false;
 	}
@@ -29,7 +30,6 @@ public class Player : MonoBehaviour
 		if (health <= 0) dead = true;
 		if (onFire && (Time.time - startTime) > 1)
 		{
-			print(health);
 			health--;
 			startTime++;
 			flameTimer++;
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 
 		if (!dead)
 		{
-			rb2D.MovePosition(rb2D.position + velocity * Time.fixedDeltaTime);
+			rb2D.MovePosition(rb2D.position + velocity * SPEED_MULTIPLIER * Time.fixedDeltaTime);
 		}
 	}
 	void OnCollisionEnter2D(Collision2D col)
@@ -49,9 +49,8 @@ public class Player : MonoBehaviour
 		string colTag = col.gameObject.tag;
 		if (colTag.Equals("Enemy"))
 		{
-			print("hit");
 			health--;
-			rb2D.MovePosition(rb2D.position + KB_VECT * Time.fixedDeltaTime);
+			rb2D.MovePosition(rb2D.position + KB_VECT * SPEED_MULTIPLIER * Time.fixedDeltaTime);
 		}
 		else if (colTag.Equals("Rain"))
 		{
@@ -63,7 +62,6 @@ public class Player : MonoBehaviour
 	{
 		if (other.gameObject.tag.Equals("Flame"))
 		{
-			print("touch Flame");
 			health--;
 			startTime = Time.time;
 			onFire = true;

@@ -57,11 +57,17 @@ public class Commands : MonoBehaviour
 		GameObject clone = (GameObject) Instantiate (obj, transform.position, transform.rotation);
 		if (toolIndex == 1)
 		{
-			Destroy(clone, 3);
+			if (clone != null)
+			{
+				Destroy(clone, 3);
+			}
 		}
 		else if (toolIndex == 2)
 		{
-			Destroy(clone, 5);
+			if (clone != null)
+			{
+				Destroy(clone, 5);
+			}
 		}
 	}
 }

@@ -11,12 +11,10 @@ public class Flame : MonoBehaviour
 	{
 		GetComponent<SpriteRenderer> ().sprite = ignite;
 		startTime = Time.time;
-		print (Time.time);
 	}
 
 	void Update ()
 	{
-		print (Time.time);
 		if (Time.time - startTime > 1.5) {
 			explode ();
 		}
