@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-	public int START_HEALTH;
+	public float START_HEALTH;
 	public int FLAME_DURATION;
 	public int SPEED_MULTIPLIER;
 	private static Vector2 KB_VECT = Vector2.left;
 
-	public int health { get; set; }
+	public float health { get; set; }
 
 	private int flameTimer;
 	private float startTime;
