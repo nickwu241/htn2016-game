@@ -15,6 +15,6 @@ public class GameCamera : MonoBehaviour
 	void FixedUpdate()
 	{
 		//Only move in X axis
-		transform.position = player.transform.position + offset;
+		transform.position = new Vector3(player.transform.position.x, 0, 0) + offset;
 	}
 }

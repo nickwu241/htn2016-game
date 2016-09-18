@@ -11,11 +11,11 @@ public class Commands : MonoBehaviour
 
 	void Start ()
 	{
-		
+		//gameObject.GetComponentInChildren<Flame>();
 		tools = new List<GameObject>();
 		tools.Add(GameObject.FindGameObjectWithTag("Rain")); // 0
-		tools.Add(GameObject.FindGameObjectWithTag("Flame"));
-		tools.Add(GameObject.FindGameObjectWithTag("Circle"));
+		tools.Add(GameObject.FindGameObjectWithTag("Flame")); // 1
+		tools.Add(GameObject.FindGameObjectWithTag("Circle")); // 2
 		camera = Camera.main;
 		toolIndex = 0;
 	}
@@ -55,7 +55,11 @@ public class Commands : MonoBehaviour
 	{
 		//print ("Mouse pos: " + Camera.main.ScreenToWorldPoint (Input.mousePosition));
 		GameObject clone = (GameObject) Instantiate (obj, transform.position, transform.rotation);
-		if (toolIndex == 1 || toolIndex == 2)
+		if (toolIndex == 1)
+		{
+			Destroy(clone, 3);
+		}
+		else if (toolIndex == 2)
 		{
 			Destroy(clone, 5);
 		}
