@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
 	void Start ()
 	{
-		health = 1;
+		health = 5;
 	}
 
 	void FixedUpdate ()
@@ -25,10 +25,10 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-	void OnCollisionEnter2D (Collision2D col)
+	void OnTriggerEnter2D (Collider2D col)
 	{
 		string colTag = col.gameObject.tag;
-		if (colTag.Equals ("Fire")) {
+		if (colTag.Equals ("Flame")) {
 			health--;
 		} else if (colTag.Equals ("Water")) {
 			//
