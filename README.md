@@ -2,7 +2,7 @@
 
 Created @ **Hack The North 2016** by:
 
-* Leoaril Roberts
+* Leoariel Roberts
 * Katrina Schouten
 * Nicholas Wu
 
